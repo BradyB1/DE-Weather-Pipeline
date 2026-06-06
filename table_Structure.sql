@@ -43,7 +43,17 @@ CREATE TABLE IF NOT EXISTS weather_daily (
 
 );
 
+CREATE TABLE etl_run_log (
+    run_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 
+    pipeline_name VARCHAR(100),
+    start_time TIMESTAMP,
+    end_time TIMESTAMP,
+    status VARCHAR(20),
+    rows_inserted INTEGER,
+    rows_updated INTEGER,
+    error_message TEXT
+);
 
 
 INSERT INTO locations (city, state_name, country, lat, long)
@@ -79,6 +89,7 @@ INSERT INTO locations (city, state_name, country, lat, long)
 
 -- DROP TABLE locations cascade;
 -- DROP TABLE weather_daily;
+-- DROP TABLE etl_run_log;
 
 
 
