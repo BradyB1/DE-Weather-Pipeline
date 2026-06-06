@@ -1,0 +1,42 @@
+Cites
+1. Westminster
+2. Baltimore
+3. Frederick
+4. Rockville
+5. Annapolis
+
+
+
+SQL tables
+1. Locations
+    - location_di
+    - city
+    - state
+    - country
+    - Lat
+    - long
+
+2. weather_daily
+    - weather_id
+    - locaiton_id
+    - weather_date
+    - temperature_max
+    - temperature_min
+    - precipiation_sum
+    - wing_speed_max
+    - created_at
+
+
+
+Goal: 
+    1. pull 7 says of weather for 1 city
+    2. load it to SQL
+    3. query it successfully
+
+Then: 
+1 city → 5 cities
+7 days → 30 days
+manual run → scheduled run
+SQL table → Power BI dashboard
+
+
