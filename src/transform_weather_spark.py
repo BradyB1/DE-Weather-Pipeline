@@ -38,9 +38,9 @@ df_cleaned.show(truncate=False)
 df_cleaned.printSchema()
 
 # df_cleaned.coalesce(1).write.format('json').save("../silver/Cleaned_weather_1_frederick.json")
-# df_cleaned.write.mode("overwrite").parquet("../data/silver/weather_daily")
+df_cleaned.write.mode("overwrite").parquet("../data/silver/weather_daily")
 # df_cleaned.write.mode("overwrite").json("../data/silver/weather_daily_json")
-pandas_df = df_cleaned.toPandas()
-pandas_df.to_csv("../data/silver/weather_daily.csv", index=False)
+# pandas_df = df_cleaned.toPandas()
+# pandas_df.to_csv("../data/silver/weather_daily.csv", index=False)
 
 spark.stop()
