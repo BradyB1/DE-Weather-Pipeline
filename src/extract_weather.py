@@ -67,7 +67,7 @@ def save_raw_weather(data, location_id, city):
     return file_path
 
 
-def main():
+def run_extract():
     connection = get_db_connection()
     cursor = connection.cursor()
     
@@ -96,4 +96,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    run_extract()
